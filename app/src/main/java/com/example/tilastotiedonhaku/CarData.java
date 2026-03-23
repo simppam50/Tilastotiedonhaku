@@ -1,10 +1,10 @@
-package com.example.tilastotiedonhaku2;
+package com.example.tilastotiedonhaku;
 
-public class Cardata {
+public class CarData {
     private String type;
     private int amount;
 
-    public Cardata(String type, int amount) {
+    public CarData(String type, int amount) {
         this.type = type;
         this.amount = amount;
     }

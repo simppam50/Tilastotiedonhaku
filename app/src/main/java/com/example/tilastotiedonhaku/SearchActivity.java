@@ -1,4 +1,4 @@
-package com.example.tilastotiedonhaku2;
+package com.example.tilastotiedonhaku;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Searchactivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     private static final String API_URL =
             "https://pxdata.stat.fi:443/PxWeb/api/v1/fi/StatFin/mkan/statfin_mkan_pxt_11ic.px";
@@ -54,7 +54,7 @@ public class Searchactivity extends AppCompatActivity {
         searchButton.setOnClickListener(v -> onSearchButtonClick());
 
         listInfoActivityButton.setOnClickListener(v -> {
-            Intent intent = new Intent(Searchactivity.this, Listinfoactivity.class);
+            Intent intent = new Intent(SearchActivity.this, ListInfoActivity.class);
             startActivity(intent);
         });
 
@@ -139,7 +139,7 @@ public class Searchactivity extends AppCompatActivity {
                         .getJSONObject("index");
                 JSONArray valuesArray     = result.getJSONArray("value");
 
-                Cardatastorage storage = Cardatastorage.getInstance();
+                CarDataStorage storage = CarDataStorage.getInstance();
                 storage.clearData();
                 storage.setCity(city);
                 storage.setYear(year);
@@ -154,7 +154,7 @@ public class Searchactivity extends AppCompatActivity {
                             amount = valuesArray.getInt(idx);
                         }
                     }
-                    storage.addCarData(new Cardata(typeName, amount));
+                    storage.addCarData(new CarData(typeName, amount));
                 }
 
                 runOnUiThread(() -> statusText.setText("Haku onnistui"));

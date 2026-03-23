@@ -1,4 +1,4 @@
-package com.example.tilastotiedonhaku2;
+package com.example.tilastotiedonhaku;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class Listinfoactivity extends AppCompatActivity {
+public class ListInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,11 @@ public class Listinfoactivity extends AppCompatActivity {
 
         backButton.setOnClickListener(v -> finish());
 
-        Cardatastorage storage = Cardatastorage.getInstance();
+        CarDataStorage storage = CarDataStorage.getInstance();
 
         String city = storage.getCity();
         int year    = storage.getYear();
-        ArrayList<Cardata> carDataList = storage.getCardata();
+        ArrayList<CarData> carDataList = storage.getCarData();
 
         cityText.setText((city != null && !city.isEmpty()) ? city : "–");
         yearText.setText(year > 0 ? String.valueOf(year) : "–");
@@ -33,7 +33,7 @@ public class Listinfoactivity extends AppCompatActivity {
         if (carDataList != null && !carDataList.isEmpty()) {
             StringBuilder sb = new StringBuilder();
             int total = 0;
-            for (Cardata cd : carDataList) {
+            for (CarData cd : carDataList) {
                 sb.append(cd.getType()).append(": ").append(cd.getAmount()).append("\n");
                 total += cd.getAmount();
             }

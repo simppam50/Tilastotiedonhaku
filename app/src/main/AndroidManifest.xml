@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tilastotiedonhaku2">
+    package="com.example.tilastotiedonhaku">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,7 +9,7 @@
         android:label="Autohakusovellus"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".Mainactivity"
+        <activity android:name="com.example.tilastotiedonhaku.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Searchactivity"
+        <activity android:name="com.example.tilastotiedonhaku.SearchActivity"
             android:exported="false" />
 
-        <activity android:name=".Listinfoactivity"
+        <activity android:name="com.example.tilastotiedonhaku.ListInfoActivity"
             android:exported="false" />
 
     </application>

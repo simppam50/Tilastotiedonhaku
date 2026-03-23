@@ -1,4 +1,4 @@
-package com.example.tilastotiedonhaku2
+package com.example.tilastotiedonhaku
 
 import org.junit.Test
 

@@ -1,11 +1,11 @@
-package com.example.tilastotiedonhaku2;
+package com.example.tilastotiedonhaku;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Mainactivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +16,12 @@ public class Mainactivity extends AppCompatActivity {
         Button listInfoActivityButton = findViewById(R.id.ListInfoActivityButton);
 
         searchActivityButton.setOnClickListener(v -> {
-            Intent intent = new Intent(Mainactivity.this, Searchactivity.class);
+            Intent intent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(intent);
         });
 
         listInfoActivityButton.setOnClickListener(v -> {
-            Intent intent = new Intent(Mainactivity.this, Listinfoactivity.class);
+            Intent intent = new Intent(MainActivity.this, ListInfoActivity.class);
             startActivity(intent);
         });
     }

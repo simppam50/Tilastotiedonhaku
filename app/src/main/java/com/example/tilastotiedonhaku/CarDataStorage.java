@@ -1,26 +1,26 @@
-package com.example.tilastotiedonhaku2;
+package com.example.tilastotiedonhaku;
 
 import java.util.ArrayList;
 
-public class Cardatastorage {
-    private static Cardatastorage instance;
+public class CarDataStorage {
+    private static CarDataStorage instance;
 
     private String city;
     private int year;
-    private ArrayList<Cardata> carData;
+    private ArrayList<CarData> carData;
 
-    private Cardatastorage() {
+    private CarDataStorage() {
         carData = new ArrayList<>();
     }
 
-    static public Cardatastorage getInstance() {
+    static public CarDataStorage getInstance() {
         if (instance == null) {
-            instance = new Cardatastorage();
+            instance = new CarDataStorage();
         }
         return instance;
     }
 
-    public ArrayList<Cardata> getCardata() {
+    public ArrayList<CarData> getCarData() {
         return carData;
     }
 
@@ -44,7 +44,7 @@ public class Cardatastorage {
         return year;
     }
 
-    public void addCarData(Cardata carDataItem) {
+    public void addCarData(CarData carDataItem) {
         carData.add(carDataItem);
     }
 }
