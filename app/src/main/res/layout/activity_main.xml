@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#F5F0FF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autohakusovellus"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#CC00AA"
+        android:layout_marginBottom="60dp" />
+
+    <Button
+        android:id="@+id/SearchActivityButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Hae kaupungin\nautojen määrä"
+        android:backgroundTint="#6633CC"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/ListInfoActivityButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Listaa tiedot"
+        android:backgroundTint="#6633CC"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
+
+</LinearLayout>
